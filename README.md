@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SeguKreT — Bases para anclaje de condensadoras de aire acondicionado, sin perforación de losa.  Fabricada con concreto y agregados de la mejor calidad, garantiza resistencia frente a los climas más exigentes.
+
+Su anclaje de acero inoxidable asegura una sujeción duradera, mientras que el buje amortiguador reduce vibraciones y ruidos para un mayor confort.
+
+Con SeguKret no solo proteges tu inversión, también mejoras la eficiencia y prolongas la vida útil de tus equipos
+</title>
+<meta name="description" content=" Protección y Resistencia:Protege tus equipos de fuertes vientos y lluvias torrenciales, Dile adios a las vibraciones y ruidos molestos, mejora el rendimiento de tu equipo al evitar contacto con el concreto a alta temperatura, se instalan sin perforar losa asi quye despreocupate de filtraciones, goteras o daños estructurales en tus techos. 
+
+La instalación es simple que la puedes realizar tu mismo, tu contratista o técnico de aire acondicionado de tu confianza
+
+SeguKret: Seguridad desde la base ">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root { --bg:#0f172a; --fg:#e5e7eb; --accent:#f97316; }
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--fg)}
+.hero{position:relative;min-height:100dvh;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;filter:brightness(0.45)}
+.container{position:relative;z-index:1;width:min(1100px,92vw);display:grid;grid-template-columns:1.1fr .9fr;gap:28px}
+@media (max-width:900px){.container{grid-template-columns:1fr;gap:18px}}
+.card{background:rgba(15,23,42,.72);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:22px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.logo{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.logo-badge{width:38px;height:38px;border-radius:9px;background:linear-gradient(135deg,#111,#222);border:1px solid rgba(255,255,255,.12);display:grid;place-items:center}
+.logo-badge span{font-weight:800;color:var(--accent)}
+h1{margin:8px 0 10px;font-size:clamp(26px,3vw,38px);line-height:1.1}
+p.lead{margin:0 0 14px;font-size:clamp(14px,2vw,16px);color:#cbd5e1}
+.bullets{display:grid;gap:8px;margin:18px 0}
+.bullets div{display:flex;align-items:flex-start;gap:10px}
+.bullets svg{flex:0 0 18px;margin-top:2px}
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.gallery img{width:100%;height:170px;object-fit:cover;border-radius:12px;border:1px solid rgba(255,255,255,.1)}
+form{display:grid;gap:10px}
+label{font-size:12px;color:#cbd5e1}
+input,textarea{width:100%;padding:12px 12px;border-radius:12px;border:1px solid rgba(255,255,255,.14);background:rgba(2,6,23,.65);color:#e5e7eb}
+input::placeholder,textarea::placeholder{color:#94a3b8}
+textarea{min-height:110px;resize:vertical}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:560px){.row{grid-template-columns:1fr}}
+.submit{display:flex;gap:10px;align-items:center}
+.btn{appearance:none;border:0;border-radius:12px;padding:12px 16px;background:var(--accent);color:#0b0f1a;font-weight:700;cursor:pointer}
+.muted{font-size:12px;color:#94a3b8}
+.footer{position:absolute;inset:auto 0 10px 0;display:flex;justify-content:center;z-index:1}
+.footer p{font-size:12px;color:#94a3b8}
+.hidden-field{position:absolute;left:-10000px}
+</style>
+</head>
+<body>
+<section class="hero">
+<div class="container">
+<div class="card">
+<div class="logo">
+<div class="logo-badge"><span>K</span></div>
+<strong>SeguKreT</strong>
+</div>
+<h1>Bases para condensadoras. Elevadas, firmes y sin perforar tu losa.</h1>
+<p class="lead">Resisten lluvia y viento. Instalación adhesiva. Altura de 6 cm para evitar encharcamientos.</p>
+<div class="bullets">
+<div>
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6L9 17l-5-5" stroke="#f97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<span>Ideal para 12k–48k BTU</span>
+</div>
+<div>
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6L9 17l-5-5" stroke="#f97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<span>Sin taladrar impermeabilizante</span>
+</div>
+<div>
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6L9 17l-5-5" stroke="#f97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<span>Listo para instalación en 1 visita</span>
+</div>
+</div>
+<div class="gallery">
