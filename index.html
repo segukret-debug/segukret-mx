@@ -8,115 +8,96 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --brand:#c7601e;   /* naranja del logo */
-    --ink:#0f172a;     /* texto oscuro */
-    --card:#0b1220;    /* tarjeta oscura */
-  }
+  :root{ --brand:#c7601e; --ink:#0f172a; }
   *{box-sizing:border-box}
   html,body{height:100%}
-  body{
-    margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-    color:var(--ink); background:#fff; /* FONDO BLANCO */
-  }
-
-  /* Barra con logo */
-  .topbar{
-    max-width:1200px; margin:0 auto; padding:16px 20px; display:flex; align-items:center; gap:12px;
-  }
-  .logo{height:44px; width:auto}
-
-  /* Sección hero en 2 columnas */
-  .hero{
-    max-width:1200px; margin:0 auto; padding:24px 20px 56px;
-    display:grid; grid-template-columns: 1.1fr 1fr; gap:28px;
-  }
-  /* Tarjeta de texto (oscura, como ya tenías) */
+  body{margin:0; font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif; background:#fff; color:var(--ink);}
+  .wrap{max-width:1100px; margin:0 auto; padding:32px 20px 64px;}
+  .hero{display:grid; grid-template-columns:1fr 1fr; gap:28px;}
   .card{
-    background:linear-gradient(180deg,#0b1220, #0b1220ee);
+    background:linear-gradient(180deg,#0b1220,#0b1220ee);
     color:#e6edf6; border-radius:18px; padding:28px; box-shadow:0 12px 40px rgba(15,23,42,.35);
   }
-  .badge{
-    display:inline-flex; align-items:center; gap:10px; background:#151e33; color:#f3f6ff;
-    padding:10px 14px; border-radius:12px; font-weight:700; width:max-content; margin-bottom:14px;
-  }
+  .badge{display:inline-flex; gap:10px; align-items:center; background:#151e33; padding:10px 14px; border-radius:12px; font-weight:700}
   .badge i{display:inline-grid; place-items:center; width:28px; height:28px; border-radius:8px; background:#1f2a44; color:#ffb86b}
-  h1{font-size:38px; line-height:1.05; margin:8px 0 12px; letter-spacing:-.5px}
-  p.lead{margin:0 0 14px; color:#c8d2e6}
-  ul{margin:0 0 18px; padding:0; list-style:none}
+  h1{font-size:38px; line-height:1.05; margin:12px 0 14px; letter-spacing:-.5px}
+  p.lead{margin:0 0 16px; color:#c8d2e6}
+  ul{margin:0 0 20px; padding:0; list-style:none}
   li{display:flex; gap:10px; margin:10px 0}
   li::before{content:"✓"; color:#8bff9c}
-
-  /* Formulario simple */
-  form{display:grid; gap:10px; margin-top:6px}
+  form{display:grid; gap:10px}
   input,textarea,button{
     font:inherit; padding:12px 14px; border:1px solid #26324f; border-radius:10px; background:#0f1930; color:#e6edf6;
   }
   textarea{min-height:96px; resize:vertical}
-  button{cursor:pointer; background:var(--brand); border-color:transparent; color:#fff; font-weight:700}
+  button{cursor:pointer; background:var(--brand); border:0; color:#fff; font-weight:700}
   button:hover{filter:brightness(.95)}
-
-  /* Columna derecha: foto */
-  .hero-media{
-    border-radius:18px; overflow:hidden; box-shadow:0 12px 40px rgba(15,23,42,.2); background:#f6f7fb;
-    display:flex; align-items:center; justify-content:center;
+  .aside{
+    border:2px dashed #e5e7eb; border-radius:18px; padding:22px; background:#fafafa; color:#334155
   }
-  .hero-media img{display:block; width:100%; height:100%; object-fit:cover}
-
-  /* Responsivo */
-  @media (max-width: 980px){
-    .hero{grid-template-columns:1fr}
-    .hero-media{order:-1; max-height:46vh}
+  .ok{
+    display:none; margin:0 0 12px; padding:12px 14px; border-radius:10px;
+    background:#ecfdf5; color:#065f46; border:1px solid #a7f3d0; font-weight:600;
   }
+  @media (max-width:980px){ .hero{grid-template-columns:1fr} }
 </style>
 </head>
 <body>
+  <main class="wrap">
+    <section class="hero">
+      <!-- Recuadro (texto + formulario) -->
+      <div class="card">
+        <div class="ok" id="okMsg">Gracias. Recibimos tu mensaje y te contactamos.</div>
+        <div class="badge"><i>K</i> SeguKreT</div>
+        <h1>Bases de concreto prefabricado para anclaje de condensadoras.</h1>
+        <p class="lead">
+          Anclaje con acero inoxidable. Sujeción duradera y segura. Buje amortiguador que elimina vibraciones y ruidos.
+        </p>
+        <ul>
+          <li>Para condensadoras 12,000 – 48,000 BTU</li>
+          <li>Sin perforar la losa. Instalación simple</li>
+          <li>Evita daños en temporada ciclónica</li>
+        </ul>
 
-  <!-- Logo arriba -->
-  <header class="topbar">
-    <!-- Pon tu archivo del logo en /assets/logo.png -->
-    <img src="assets/logo.png" alt="SeguKreT" class="logo">
-  </header>
+        <!-- FORMULARIO: FormSubmit → envía a segukret@gmail.com -->
+        <form action="https://formsubmit.co/segukret@gmail.com" method="POST">
+          <!-- Campos visibles -->
+          <input type="text" name="nombre" placeholder="Tu nombre" required>
+          <input type="tel"  name="telefono" placeholder="WhatsApp o teléfono" required>
+          <textarea name="mensaje" placeholder="Cuéntanos tu proyecto"></textarea>
 
-  <!-- Hero con tarjeta + foto -->
-  <section class="hero">
+          <!-- Config FormSubmit -->
+          <input type="hidden" name="_subject" value="Nuevo contacto SeguKreT">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <!-- redirige a la misma página con ?sent=1 -->
+          <input type="hidden" name="_next" value="https://www.segukret.mx/?sent=1">
 
-    <!-- Columna izquierda: tarjeta -->
-    <div class="card">
-      <div class="badge"><i>K</i> SeguKreT</div>
-      <h1>Bases de concreto prefabricado para anclaje de condensadoras.</h1>
-      <p class="lead">Anclaje con acero inoxidable, sujeción duradera y segura, buje amortiguador que elimina vibraciones y ruidos para mayor confort.</p>
+          <button type="submit">Solicitar información</button>
+        </form>
+      </div>
 
-      <ul>
-        <li>Ideal para condensadoras desde 12,000 – 48,000 BTU</li>
-        <li>Sin taladrar tu techo. Instalación simple que puedes realizar tú mismo</li>
-        <li>Evita daños o pérdida total en temporada ciclónica</li>
-      </ul>
+      <!-- Lado derecho sin imagen, solo texto de apoyo -->
+      <aside class="aside">
+        <h3 style="margin:0 0 10px">Cómo funciona</h3>
+        <ol style="margin:0; padding-left:18px; line-height:1.6">
+          <li>Nos dejas tu contacto.</li>
+          <li>Te confirmamos medida y cantidad.</li>
+          <li>Entrega o instalación en 1 visita.</li>
+        </ol>
+        <p style="margin-top:12px"><strong>Tel/Whats:</strong> 999 330 7071</p>
+        <p style="margin:0"><strong>Correo:</strong> segukret@gmail.com</p>
+      </aside>
+    </section>
+  </main>
 
-      <!-- Formulario: cambia el action por tu endpoint real -->
-      <form action="https://formspree.io/f/XXXXXXX" method="POST">
-        <input name="nombre" placeholder="Tu nombre" required>
-        <input name="telefono" placeholder="WhatsApp o teléfono" required>
-        <textarea name="mensaje" placeholder="Cuéntanos tu proyecto"></textarea>
-        <button type="submit">Solicitar información</button>
-      </form>
-    </div>
-
-    <!-- Columna derecha: foto grande -->
-    <!-- Pon la foto en /assets/foto1.jpg (usa la imagen de la condensadora amplia) -->
-    <figure class="hero-media">
-      <img src="assets/foto1.jpg" alt="Base prefabricada para condensadora">
-    </figure>
-    
-<img src="assets/logo.png">
-<img src="assets/foto1.jpg">
-
-  </section>
-
+  <script>
+    // Muestra aviso si venimos de _next=?sent=1
+    const ok = new URLSearchParams(location.search).get('sent');
+    if(ok==='1'){ document.getElementById('okMsg').style.display='block'; }
+  </script>
 </body>
 </html>
-
-  
 
 
 
