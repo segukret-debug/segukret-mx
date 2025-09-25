@@ -29,6 +29,7 @@
   input,textarea,button{
     font:inherit; padding:12px 14px; border:1px solid #26324f; border-radius:10px; background:#0f1930; color:#e6edf6;
   }
+  input::placeholder, textarea::placeholder{color:#93a4c9}
   textarea{min-height:96px; resize:vertical}
   button{cursor:pointer; background:var(--brand); border:0; color:#fff; font-weight:700}
   button:hover{filter:brightness(.95)}
@@ -59,34 +60,40 @@
           <li>Evita daños en temporada ciclónica</li>
         </ul>
 
-        <!-- FORMULARIO: FormSubmit → envía a segukret@gmail.com -->
-        <form action="https://formsubmit.co/segukret@gmail.com" method="POST">
+        <!-- FORMULARIO ÚNICO (FormSubmit) -->
+        <form action="https://formsubmit.co/segukret@gmail.com" method="POST" autocomplete="on">
+          <!-- Honeypot antispam (bots lo llenan, humanos no) -->
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
           <!-- Campos visibles -->
-          <input type="text" name="nombre" placeholder="Tu nombre" required>
-          <input type="tel"  name="telefono" placeholder="WhatsApp o teléfono" required>
-          <textarea name="mensaje" placeholder="Cuéntanos tu proyecto"></textarea>
+          <input type="text"   name="nombre" placeholder="Tu nombre" required>
+          <input type="tel"    name="telefono" placeholder="WhatsApp o teléfono" required>
+          <input type="email"  name="email" placeholder="Tu correo (opcional)">
+          <textarea name="mensaje" placeholder="Cuéntanos tu proyecto" required></textarea>
 
           <!-- Config FormSubmit -->
-          <input type="hidden" name="_subject" value="Nuevo contacto SeguKreT">
+          <input type="hidden" name="_subject"  value="Nuevo contacto SeguKreT">
           <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_captcha" value="false">
-          <!-- redirige a la misma página con ?sent=1 -->
-          <input type="hidden" name="_next" value="https://www.segukret.mx/?sent=1">
+          <input type="hidden" name="_captcha"  value="false">
+          <input type="hidden" name="_next"     value="https://www.segukret.mx/?sent=1">
 
           <button type="submit">Solicitar información</button>
         </form>
+      </div>
 
-        <form action="https://formsubmit.co/segukret@gmail.com" method="POST">
-  <input name="nombre" placeholder="Tu nombre" required>
-  <input name="telefono" placeholder="WhatsApp o teléfono" required>
-  <textarea name="mensaje" placeholder="Cuéntanos tu proyecto"></textarea>
-
-  <input type="hidden" name="_subject"  value="Nuevo contacto SeguKreT">
-  <input type="hidden" name="_template" value="table">
-  <input type="hidden" name="_captcha"  value="false">
-  <input type="hidden" name="_next"     value="https://www.segukret.mx/?sent=1">
-  <button type="submit">Solicitar información</button>
-</form>
+      <!-- Columna derecha informativa -->
+      <aside class="aside">
+        <h3 style="margin:0 0 10px">Cómo funciona</h3>
+        <ol style="margin:0; padding-left:18px; line-height:1.6">
+          <li>Nos dejas tu contacto.</li>
+          <li>Confirmamos medida y cantidad.</li>
+          <li>Entrega o instalación en 1 visita.</li>
+        </ol>
+        <p style="margin-top:12px"><strong>Tel/Whats:</strong> 999 330 7071</p>
+        <p style="margin:0"><strong>Correo:</strong> segukret@gmail.com</p>
+      </aside>
+    </section>
+  </main>
 
   <script>
     // Muestra aviso si venimos de _next=?sent=1
@@ -95,7 +102,6 @@
   </script>
 </body>
 </html>
-
 
 
 
