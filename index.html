@@ -75,21 +75,18 @@
 
           <button type="submit">Solicitar información</button>
         </form>
-      </div>
 
-      <!-- Lado derecho sin imagen, solo texto de apoyo -->
-      <aside class="aside">
-        <h3 style="margin:0 0 10px">Cómo funciona</h3>
-        <ol style="margin:0; padding-left:18px; line-height:1.6">
-          <li>Nos dejas tu contacto.</li>
-          <li>Te confirmamos medida y cantidad.</li>
-          <li>Entrega o instalación en 1 visita.</li>
-        </ol>
-        <p style="margin-top:12px"><strong>Tel/Whats:</strong> 999 330 7071</p>
-        <p style="margin:0"><strong>Correo:</strong> segukret@gmail.com</p>
-      </aside>
-    </section>
-  </main>
+        <form action="https://formsubmit.co/segukret@gmail.com" method="POST">
+  <input name="nombre" placeholder="Tu nombre" required>
+  <input name="telefono" placeholder="WhatsApp o teléfono" required>
+  <textarea name="mensaje" placeholder="Cuéntanos tu proyecto"></textarea>
+
+  <input type="hidden" name="_subject"  value="Nuevo contacto SeguKreT">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_captcha"  value="false">
+  <input type="hidden" name="_next"     value="https://www.segukret.mx/?sent=1">
+  <button type="submit">Solicitar información</button>
+</form>
 
   <script>
     // Muestra aviso si venimos de _next=?sent=1
@@ -98,6 +95,7 @@
   </script>
 </body>
 </html>
+
 
 
 
